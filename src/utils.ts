@@ -38,7 +38,7 @@ export const getCheapestOffers = (offers: Offer[]) => {
 };
 
 export const getDatasetItems = async (datasetId: string): Promise<Offer[]> => {
-    const endpoint = `https://api.apify.com/v2/datasets/:${datasetId}/items`;
+    const endpoint = `https://api.apify.com/v2/datasets/${datasetId}/items`;
     try {
         const response = await axios.get<Offer[]>(endpoint);
         return response.data;
